@@ -1,14 +1,14 @@
-# ODMAT
+# Open Data Pathway
 
 [Open Data Pathway](http://pathway.theodi.org) is a tool to help organisations carry out an assessment of their open data maturity.
 
-The tool allows users to complete a series of short questionnaires to help calculate the maturity of a number of processes in the 
+The tool allows users to complete a series of short questionnaires to help calculate the maturity of a number of processes in the
 organisation, e.g. how data is released and governed.
 
-After completing an assessment the tool will provide the organisation with a maturity score and will create a suggested action plan 
+After completing an assessment the tool will provide the organisation with a maturity score and will create a suggested action plan
 to help them improve their rating. The report will also include any notes and links to evidence provided during the assessment.
 
-To help benchmark organisations, and to provide a sense of the maturity of the overall community of users, the tool also includes 
+To help benchmark organisations, and to provide a sense of the maturity of the overall community of users, the tool also includes
 [some anonymised statistics](http://pathway.theodi.org/statistics). These statistics are [published as open data](http://pathway.theodi.org/statistics/data).
 
 ## Summary of features
@@ -35,7 +35,9 @@ To help benchmark organisations, and to provide a sense of the maturity of the o
 
 * Heatmap showing scores for all completed assessments in the system and those for all data.gov.uk organisations
 * A data.gov.uk organisation can compare itself against others in its department (e.g. Defra)
+* Usage and aggregate statistics are available for all organisations and can be grouped by country
 * Statistics are published as open data for reuse by the community
+
 
 ## Development
 
@@ -47,7 +49,7 @@ To help benchmark organisations, and to provide a sense of the maturity of the o
 ### Environment variables
 
 The `.env` file in the application directory should contain:
- 
+
 ```
 MANDRILL_APIKEY=...
 MANDRILL_USERNAME=...
@@ -74,7 +76,7 @@ Currently there are two deployment: a live site and a test server. Both use the 
 * Mandrill
 * Heroku Scheduler - for running the data.gov.uk download and statistics generation
 
-The Travis build is configured to automatically deploy successful builds of master to the `odmat-staging` application. 
+The Travis build is configured to automatically deploy successful builds of master to the `odmat-staging` application.
 
 Releases to production have so far been done manually: the production heroku app is set up as a remote git repo and code is pushed to that (`git push production master`).
 
@@ -113,7 +115,7 @@ The spreadsheet consist of three worksheets:
 * `improvements` - list of suggested improvements associated with specific answers
 
 #### Activities
-  
+
 The `activities` worksheet has the following columns:
 
 * `Dimension` - name of dimension (from the open data maturity model), these are categories and have many activities
@@ -144,4 +146,3 @@ The `improvements` worksheet is structured as follows:
 * `Notes` -- the text displayed to the user
 
 An answer may have several improvements associated with it, e.g. a list of recommended tasks. These are displayed to the user based ordered by the ID in the spreadsheet.
-
