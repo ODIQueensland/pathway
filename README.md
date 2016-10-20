@@ -17,7 +17,7 @@ To help benchmark organisations, and to provide a sense of the maturity of the o
 
 * User can register with the site to create one or more assessments
 * Basic account management features, including profile editing, password management, etc.
-* User can link themselves to a data.gov.uk organisation to benchmark against their peer organisations
+* Users can link themselves to a country and their data.gov.uk organisation to benchmark against their peers
 * Assessment can be started and resumed at any point; user can tackle activity assessments in any order
 * Simple multiple choice questions with supporting help text; user can attach notes and add links to provide evidence of progression
 
